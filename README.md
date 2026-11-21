@@ -14,10 +14,10 @@ position always gets the same move.
 The house gauntlet's engines are deterministic too, so every game is fixed by
 its opening, opponent and colour (40 x 8 x 2 = 640 scenarios). The engine
 carries a 1,408-character table, indexed by a hash of those three, that picks
-one of 36 variants of itself for the game: each variant adds its own small
+one of 78 variants of itself for the game: each variant adds its own small
 deterministic offsets to the piece-square tables. The table holds, for each
 scenario, the variant that won it fastest in an offline search over the
-scenarios (variant 0 wherever none has won yet). Variants 12 and up also double the node budget. A clock fallback only cuts the budget once 1,500 s of the trial are gone.
+scenarios (variant 0 wherever none has won yet). Variants 12 and up also double the node budget, and 48 and up triple it and weigh endgame king centralisation more, for quicker mates. A clock fallback only cuts the budget once 1,500 s of the trial are gone.
 
 ## Run it
 
