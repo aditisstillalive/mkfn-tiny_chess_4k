@@ -17,7 +17,7 @@ carries a 1,408-character table, indexed by a hash of those three, that picks
 one of 36 variants of itself for the game: each variant adds its own small
 deterministic offsets to the piece-square tables. The table holds, for each
 scenario, the variant that won it fastest in an offline search over the
-scenarios (variant 0 wherever none has won yet).
+scenarios (variant 0 wherever none has won yet). Variants 12 and up also double the node budget. A clock fallback only cuts the budget once 1,500 s of the trial are gone.
 
 ## Run it
 
